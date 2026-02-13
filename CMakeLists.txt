@@ -28,7 +28,7 @@ if(NOT minhook_POPULATED)
     target_include_directories(minhook PUBLIC ${minhook_SOURCE_DIR}/include)
 endif()
 
-add_library(cslol-dll-legacy SHARED src/cslol-api.h src/cslol-dll-legacy.c)
+add_library(cslol-dll SHARED src/cslol-api.h src/cslol-dll.c)
 target_link_libraries(cslol-dll-legacy PRIVATE minhook)
 
 add_executable(cslol-inj src/cslol-inj.c)
