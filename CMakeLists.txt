@@ -32,7 +32,7 @@ add_library(cslol-dll SHARED src/cslol-api.h src/cslol-dll.c)
 target_link_libraries(cslol-dll-legacy PRIVATE minhook)
 
 add_executable(cslol-inj src/cslol-inj.c)
-target_link_libraries(cslol-inj PRIVATE cslol-dll-legacy)
+target_link_libraries(cslol-inj PRIVATE cslol-dll)
 
 add_custom_command(TARGET cslol-inj
     POST_BUILD
